@@ -28,9 +28,9 @@ Handlebars = {};
 
 Handlebars.to_json_ast = function (code) {
   // We need handlebars and underscore, but this is bundle time, so
-  // we use 'require'.
-  // For unit testing, we are in the server environment, where we
-  // don't have 'require' but do have '_'.
+  // we load them using 'require'.
+  // If we're in a unit test right now, we're actually in the server
+  // run-time environment; we have '_' but not 'require'.
   // This is all very hacky.
   var req = (typeof require === 'undefined' ?
              __meteor_bootstrap__.require : require);
