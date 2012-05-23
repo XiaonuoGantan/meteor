@@ -90,7 +90,7 @@ Tinytest.add("templating - html scanner", function (test) {
                       'pizza</template>'),
     TEMPLATE_PREAMBLE+'"favoritefood",Handlebars.json_ast_to_func(["pizza"])'+
       TEMPLATE_POSTAMBLE);
-  
+
   // error cases; exact line numbers are not critical, these just reflect
   // the current implementation
 
